@@ -18,7 +18,7 @@ public interface Formater {
      * @param param  参数
      * @return
      */
-    String requestFormat(Class clazz, String method, Object param);
+    String requestFormat(Class clazz, String method, Object[] param);
 
     /**
      * 响应报文格式化

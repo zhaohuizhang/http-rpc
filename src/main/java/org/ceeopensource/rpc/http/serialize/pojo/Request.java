@@ -21,7 +21,7 @@ public class Request {
     /**
      * 请求参数
      */
-    private Object param;
+    private Object[] param;
 
     public Class getClazz() {
         return clazz;
@@ -39,11 +39,11 @@ public class Request {
         this.method = method;
     }
 
-    public Object getParam() {
+    public Object[] getParam() {
         return param;
     }
 
-    public void setParam(Object param) {
+    public void setParam(Object[] param) {
         this.param = param;
     }
 }

@@ -1,7 +1,6 @@
 package org.ceeopensource.rpc.http.serialize;
 
 import org.ceeopensource.rpc.exception.RpcException;
-import org.ceeopensource.rpc.http.serialize.pojo.Request;
 
 /**
  * 报文解析处理
@@ -20,7 +19,7 @@ public interface Parser {
      * @return
      * @throws RpcException
      */
-    Request requestParse(String param) throws RpcException;
+    Object requestParse(String param) throws RpcException;
 
     /**
      * 响应报文解析
@@ -28,6 +27,7 @@ public interface Parser {
      * @param result
      * @param <T>
      * @return
+     * @throws RpcException
      */
-    <T> T responseParse(String result);
+    <T> T responseParse(String result) throws RpcException;
 }
